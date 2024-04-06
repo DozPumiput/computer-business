@@ -1,0 +1,129 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Noto Sans Thai', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #800080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 50px;
+  }
+  
+  footer {
+    background-color: #800080;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Specific Page Styles */
+  /* Home Page */
+  body.index header {
+    background-color: #4b0082;
+  }
+  
+  body.index footer {
+    background-color: #4b0082;
+  }
+  
+  /* About Page */
+  body.about header {
+    background-color: #9932cc;
+  }
+  
+  body.about footer {
+    background-color: #9932cc;
+  }
+  
+  /* Services Page */
+  body.services header {
+    background-color: #9400d3;
+  }
+  
+  body.services footer {
+    background-color: #9400d3;
+  }
+  
+  /* Team Page */
+  body.team header {
+    background-color: #8a2be2;
+  }
+  
+  body.team footer {
+    background-color: #8a2be2;
+  }
+  
+  /* Contact Page */
+  body.contact header {
+    background-color: #800080;
+  }
+  
+  body.contact footer {
+    background-color: #800080;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* จัดให้รายชื่อแสดงตรงกลาง */
+  }
+  
+  sectionteam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* จัดให้รายชื่อแสดงตรงกลาง */
+  }
+  
+  .team-member {
+    flex-basis: 45%; /* กำหนดขนาดของแต่ละสมาชิกให้มีขนาด 45% ของ container */
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #800080;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member p {
+    margin-top: 10px;
+  }
+  
+  /* Hover Effect */
+  .team-member img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
