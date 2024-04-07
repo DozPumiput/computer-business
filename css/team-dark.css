@@ -22,8 +22,10 @@
 /* Additional styles for team page */
 .team {
   /* display: flex; */
-  flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f8f9fa; /* Light background color */
+  color: #333; /* Dark text color */
 }
 
 .team-member {
