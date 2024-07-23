@@ -1,4 +1,4 @@
-/* Default styles */
+/* Default Styles */
 * {
   margin: 0;
   padding: 0;
@@ -47,48 +47,23 @@ footer {
 }
 
 /* Specific Page Styles */
-/* Home Page */
-body.index header {
+body.index header, body.index footer {
   background-color: #4b0082;
 }
 
-body.index footer {
-  background-color: #4b0082;
-}
-
-/* About Page */
-body.about header {
+body.about header, body.about footer {
   background-color: #9932cc;
 }
 
-body.about footer {
-  background-color: #9932cc;
-}
-
-/* Services Page */
-body.services header {
+body.services header, body.services footer {
   background-color: #9400d3;
 }
 
-body.services footer {
-  background-color: #9400d3;
-}
-
-/* Team Page */
-body.team header {
+body.team header, body.team footer {
   background-color: #8a2be2;
 }
 
-body.team footer {
-  background-color: #8a2be2;
-}
-
-/* Contact Page */
-body.contact header {
-  background-color: #800080;
-}
-
-body.contact footer {
+body.contact header, body.contact footer {
   background-color: #800080;
 }
 
@@ -97,25 +72,21 @@ body.contact footer {
   .content {
     padding: 20px;
   }
-  
-  .course-level {
-    flex-direction: column;
-  }
 
-  .course-level div {
-    width: 100%;
-  }
+  /* Add your other responsive styles here */
 }
-sectionteam {
+
+/* Section Team (Optional) */
+section.team {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* จัดให้รายชื่อแสดงตรงกลาง */
+  justify-content: center; /* Center team members horizontally */
 }
 
-.map-responsive{
+/* Map Responsive (Optional) */
+.map-responsive {
   overflow: hidden;
-  padding-bottom: 56.25%;
-  /* padding-bottom: 100%; */
+  padding-bottom: 56.25%; /* Adjust for aspect ratio */
   position: relative;
   height: 0;
 }
@@ -126,4 +97,93 @@ sectionteam {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+/* Banner Link */
+.banner-link {
+  position: fixed;
+  top: 30%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 35px;
+  background-color: #c170f0;
+  padding: 0px 12.5px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: black;
+  z-index: 2;
+}
+
+.banner-link:hover {
+  background-color: #a924f7;
+}
+
+/* Image Overlay (No Change) */
+.section img {
+  position: relative;
+}
+
+.section img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.slides img {
+  flex: 1; /* Make images fill available space */
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent; /* Remove default button background */
+  outline: none; /* Remove focus outline */
+  z-index: 2; /* Ensure buttons appear on top of slides */
+}
+
+.prev {
+  left: 20px; /* Adjust position as needed */
+}
+
+.next {
+  right: 20px; /* Adjust position as needed */
+}
+
+.prev::before, .next::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff; /* Minimal button border */
+  border-radius: 50%;
+  transform: rotate(45deg); /* Arrow shape */
+}
+
+.prev::before {
+  transform: rotate(-45deg); /* Reverse arrow direction */
 }
