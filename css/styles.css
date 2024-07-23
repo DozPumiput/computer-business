@@ -93,10 +93,6 @@ body.contact footer {
 }
 
 /* Responsive Styles */
-/* Default styles */
-/* เพิ่มหรือปรับแต่ง CSS ตามต้องการ */
-
-/* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
   .content {
     padding: 20px;
