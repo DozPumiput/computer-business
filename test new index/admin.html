@@ -1,0 +1,47 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.html");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้า Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>หน้า Admin</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+            <li><a href="login.html">เข้าสู่ระบบ</a></li>
+            <li><a href="register.html">ลงทะเบียน</a></li>
+            <li><a href="admin.html">ผู้ดูแลระบบ</a></li>
+            <li><a href="logout.php">ออกจากระบบ</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="admin">
+        <h2>โพสต์กิจกรรมใหม่</h2>
+        <form action="post_activity.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="ชื่อกิจกรรม" required>
+            <textarea name="description" placeholder="รายละเอียดกิจกรรม" required></textarea>
+            <input type="file" name="image" required>
+            <button type="submit">โพสต์</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

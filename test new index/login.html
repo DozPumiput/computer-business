@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>เข้าสู่ระบบ</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+            <li><a href="login.html">เข้าสู่ระบบ</a></li>
+            <li><a href="register.html">ลงทะเบียน</a></li>
+        </ul>
+    </nav>
+
+    <section class="login">
+        <h2>เข้าสู่ระบบ</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="ชื่อผู้ใช้" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

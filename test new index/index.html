@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชื่อเว็บไซต์ของคุณ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ชื่อเว็บไซต์ของคุณ</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+            <li><a href="login.html">เข้าสู่ระบบ</a></li>
+            <li><a href="register.html">ลงทะเบียน</a></li>
+            <li><a href="admin.html">ผู้ดูแลระบบ</a></li>
+        </ul>
+    </nav>
+
+    <section class="slideshow">
+        <div class="slide">
+            <img src="img1.jpg" alt="รูปภาพที่ 1">
+        </div>
+        <div class="slide">
+            <img src="img2.jpg" alt="รูปภาพที่ 2">
+        </div>
+        <div class="slide">
+            <img src="img3.jpg" alt="รูปภาพที่ 3">
+        </div>
+    </section>
+
+    <section class="activities">
+        <h2>กิจกรรมล่าสุด</h2>
+        <div id="activities-content">
+            <!-- โพสต์กิจกรรมจะแสดงที่นี่ -->
+            <?php
+                include 'fetch_posts.php';
+            ?>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
