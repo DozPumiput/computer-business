@@ -1,0 +1,82 @@
+CREATE DATABASE online_learning_system;
+USE online_learning_system;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('viewer', 'student', 'teacher', 'admin') DEFAULT 'viewer',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    teacher_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (teacher_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+CREATE TABLE assignments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,
+    assignment_title VARCHAR(100) NOT NULL,
+    due_date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+CREATE TABLE forum (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+CREATE TABLE notifications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+CREATE TABLE enrollments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    course_id INT,
+    enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+INSERT INTO users (username, email, password, role) VALUES
+('admin', 'admin@example.com', 'admin_password_hash', 'admin'),
+('teacher1', 'teacher1@example.com', 'teacher1_password_hash', 'teacher'),
+('student1', 'student1@example.com', 'student1_password_hash', 'student'),
+('viewer1', 'viewer1@example.com', 'viewer1_password_hash', 'viewer');
+
+INSERT INTO courses (course_name, teacher_id) VALUES
+('Introduction to Programming', 2),
+('Advanced Database Systems', 2),
+('Web Development Basics', 2);
+
+INSERT INTO assignments (course_id, assignment_title, due_date) VALUES
+(1, 'Assignment 1: Variables and Data Types', '2024-08-15'),
+(2, 'Assignment 1: Database Design', '2024-08-22'),
+(3, 'Assignment 1: HTML and CSS Basics', '2024-08-29');
+
+INSERT INTO forum (user_id, message) VALUES
+(3, 'How can I improve my coding skills?'),
+(4, 'Any recommendations for good programming resources?');
+
+INSERT INTO notifications (user_id, message) VALUES
+(3, 'You have a new assignment due soon.'),
+(4, 'Your course enrollment is confirmed.');
+
+INSERT INTO enrollments (user_id, course_id) VALUES
+(3, 1),
+(3, 2),
+(4, 3);
