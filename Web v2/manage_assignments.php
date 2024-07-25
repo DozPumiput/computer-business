@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Manage Assignments</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Manage Assignments</h2>
     <form action="create_assignment.php" method="post">

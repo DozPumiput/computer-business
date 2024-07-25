@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Teacher Dashboard</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Teacher Dashboard</h2>
     <nav>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Search Results</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Search Results</h2>
     <?php

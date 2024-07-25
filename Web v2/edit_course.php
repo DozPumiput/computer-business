@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Course</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Edit Course</h2>
     <?php

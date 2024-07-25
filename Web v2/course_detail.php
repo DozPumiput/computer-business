@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Course Detail</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <?php
     include 'config.php';

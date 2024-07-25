@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Admin Dashboard</h2>
     <nav>

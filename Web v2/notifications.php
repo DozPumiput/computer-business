@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Notifications</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Notifications</h2>
     <?php

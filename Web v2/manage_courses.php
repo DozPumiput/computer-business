@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Manage Courses</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Manage Courses</h2>
     <form action="create_course.php" method="post">

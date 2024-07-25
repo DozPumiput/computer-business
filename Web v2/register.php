@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Register - Online Learning System</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <nav>
         <ul>

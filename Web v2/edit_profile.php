@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Profile</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <h2>Edit Profile</h2>
     <?php
