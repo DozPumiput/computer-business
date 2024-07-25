@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['role'] != 'teacher') {
+if ($_SESSION['role'] != 'admin') {
     header("Location: index.php");
     exit();
 }
@@ -10,7 +10,7 @@ include 'db.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teacher Dashboard - Online Learning System</title>
+    <title>Admin - Online Learning System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,7 +23,10 @@ include 'db.php';
         </ul>
     </nav>
     <div class="container">
-        <h2>Teacher Dashboard</h2>
+        <h2>Admin Panel</h2>
+        <h3>Manage Users</h3>
+        <!-- Add user management features here -->
+        <h3>Manage Courses</h3>
         <!-- Add course management features here -->
     </div>
     <footer>
